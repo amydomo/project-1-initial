@@ -15,14 +15,7 @@ public class Point {
     public Point(double x, double y) {
         this.x = x;
         this.y = y;
-    }
 
-    //Distance
-
-    public double distance(Point p2) {
-        double dx = this.x - p2.getX();
-        double dy = this.y - p2.getY();
-        return Math.sqrt(dx * dx + dy * dy);
     }
     //Getters
 
@@ -59,6 +52,15 @@ public class Point {
 
     }
 
+    //Distance
+
+    public double distance(Point p2) {
+        double dx = this.x - p2.getX();
+        double dy = this.y - p2.getY();
+        return Math.sqrt(dx * dx + dy * dy);
+
+    }
+
     //Rotation
 
     public void rotate(double angle) {
@@ -72,8 +74,8 @@ public class Point {
 
     //String
     public String toString() {
-        DecimalFormat df = new DecimalFormat("0.0");
-        return "Point{x " + df.format(x) + ", y = " + df.format(y) + "}";
+        DecimalFormat decimal = new DecimalFormat("0.0");
+        return "Point{x=" + decimal.format(x) + ", y=" + decimal.format(y) + "}";
     }
 }
 
