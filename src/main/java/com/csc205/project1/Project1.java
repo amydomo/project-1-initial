@@ -1,5 +1,7 @@
 package com.csc205.project1;
 
+import java.awt.*;
+
 /**
  * Driver class used to test Point implementation for Project 1.
  *
