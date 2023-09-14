@@ -1,5 +1,22 @@
 package com.csc205.project1;
 
+/*
+AI:
+
+Design & implement a class called Point that represents a
+location in the Cartesian plane.
+Include (at a minimum) the following methods:
+setX(double x), setY(double y), setPoint(double x, double y) - set
+the coordinates of the point.
+shiftX(double n), shiftY(double n) - shift a point by a given
+amount along one of the axes.
+distance(Point p2) - finds the distance to point p2.
+rotate(double angle) - rotates the point by a specified angle
+around the origin. The formula for rotation is as follows:
+x' = x * cos(theta) - y * sin(theta)
+y' = x * sin(theta) + y * cos(theta)
+ */
+
 import java.text.DecimalFormat;
 
 public class Point {
@@ -9,7 +26,8 @@ public class Point {
 
     //Point Constructors
     public Point() {
-        this(0.0, 0.0);
+        this.x = 0.0;
+        this.y = 0.0;
     }
 
     public Point(double x, double y) {
@@ -75,6 +93,7 @@ public class Point {
     //String
     public String toString() {
         DecimalFormat decimal = new DecimalFormat("0.0");
+
         return "Point{x=" + decimal.format(x) + ", y=" + decimal.format(y) + "}";
     }
 }
